@@ -1,27 +1,58 @@
+# Batik and Songket Motif Classification Machine Learning Model
 
-# Pusatara
-## Introduction
-This is a capstone project for our [Bangkit Academy](https://g.co/bangkit)'s final assignment. Our project is dedicated to addressing the significant issue of inadequate awareness and appreciation of traditional Indonesian fabrics like [Batik](https://en.wikipedia.org/wiki/Batik) and [Songket](https://en.wikipedia.org/wiki/Songket). 
+## Overview
 
-### Why?
-These fabrics are not merely textiles; they embody a rich cultural heritage, featuring intricate craftsmanship, diverse motifs, and age-old traditions. Regrettably, their cultural significance often remains concealed due to a lack of proper education and information dissemination to younger generations. Our team is determined to develop a comprehensive solution to educate, engage, and connect enthusiasts and artisans.
+This repository contains the code and resources to build a machine learning model for classifying Batik and Songket motifs. The model is trained to distinguish between these two traditional textile patterns, commonly found in Southeast Asian cultures. This README.md file provides detailed instructions on how others can replicate the steps to create and deploy the classification model.
 
-## Branching
-Where is the code/dataset?
+## Table of Contents
 
-- For API, go to [/api](https://github.com/Pandi20/Pusatara/tree/api)
-- For Android app, go to [/mobile-app](https://github.com/Pandi20/Pusatara/tree/mobile-app)
-- For ML dataset, go to [/ML](https://github.com/Pandi20/Pusatara/tree/ML)
+1. [Dataset](#dataset)
+2. [Preprocessing](#preprocessing)
+3. [Model Training](#model-training)
+4. [Evaluation](#evaluation)
+5. [Deployment](#deployment)
+6. [Usage](#usage)
+7. [Contributing](#contributing)
+8. [License](#license)
 
-This is the **only repository** for capstone project of group CH2-PS007. Go to respective branch to browse related resources.
+## 1. Dataset
 
-## Members
+The dataset used for training the model should consist of labeled images of Batik and Songket motifs. Ensure that you have a balanced dataset with sufficient examples of each class. You can organize the dataset into separate folders for each class.
 
-| Role | ID         | Member Name                        | GitHub Profile                        | University                |
-|------|------------|------------------------------------|---------------------------------------|---------------------------|
-| ML   | M010BSX0178| Lawinasarita                       | [@Lawinasarita](https://github.com/Lawinasarita) | Universitas Indonesia     |
-| ML   | M112BSX0789| Giselle Halim                      | [@gisellehalim](https://github.com/gisellehalim) | Institut Teknologi dan Bisnis Kalbis |
-| ML   | M313BSY0177| Hadi Sopandi                       | [@Pandi20](https://github.com/Pandi20) | Universitas Siliwangi    |
-| CC   | C172BSY3227| Tristan Budiman                    | [@trisbman](https://github.com/trisbman) | Universitas Mikroskil    |
-| MD   | A293BSX2639| Carissa Chandra                    | [@Ca-ri-ssa](https://github.com/Ca-ri-ssa) | Universitas Pelita Harapan|
-| MD   | A332BSY2217| Moh. Arif Hidayatullah             | [@Com-Us2](https://github.com/Com-Us2) | Universitas Trunojoyo    |
+```
+dataset/
+|-- batik/
+|   |-- batik_image1.jpg
+|   |-- batik_image2.jpg
+|   |-- ...
+|-- songket/
+|   |-- songket_image1.jpg
+|   |-- songket_image2.jpg
+|   |-- ...
+```
+
+## 2. Preprocessing
+
+Before training the model, it's crucial to preprocess the images. The preprocessing steps may include resizing, normalization, and data augmentation. The `model.ipynb` notebook in the repository provides an example of how to perform these tasks using a popular image processing library.
+
+## 3. Model Training
+
+Use the `model.ipynb` notebook to train the machine learning model. This notebook contains code for loading the preprocessed data and training a deep learning model using a framework like TensorFlow or PyTorch. Tune hyperparameters and experiment with different architectures to achieve the best performance.
+
+## 4. Evaluation
+
+Evaluate the model's performance using the `model.ipynb` notebook. This notebook includes code for loading the trained model and assessing its accuracy on a separate test set.
+
+## 5. Deployment
+
+To deploy the model for real-world use, you can use frameworks like Flask for creating a web service or convert the model to another format like tensorflow js. The `api` branch contains examples for tensorflow js deployment scenarios.
+
+## 6. Usage
+
+Provide clear instructions on how to use the trained model for predictions. If you've created a web service, include API documentation. If the model is intended for local use, demonstrate how to load the model and make predictions using the `usage.ipynb` notebook.
+
+## 7. Contributing
+
+Contributions, bug reports, and feature requests are welcome.
+Feel free to reach out if you have any questions or need further assistance!
+
